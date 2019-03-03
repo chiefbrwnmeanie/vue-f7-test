@@ -11,4 +11,4 @@
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 [context.production]
-  environment = { NODE_VERSION = "8.0.1" }
+  environment = { NODE_VERSION = "10.15.2" }
