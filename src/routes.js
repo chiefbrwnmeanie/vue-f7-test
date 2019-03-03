@@ -8,7 +8,6 @@ export default [
     path: '/',
     component: Home,
   },
-  
   // Components
   {
     path: '/accordion/',

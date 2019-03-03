@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 import routes from './routes'
 export default {
   name: 'app',
@@ -24,7 +23,6 @@ export default {
       theme: 'auto'
     };
   },
-
 }
 </script>
 <style lang="stylus">
