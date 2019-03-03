@@ -1,18 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Vue.js Test App"/>
+    <f7-app :params="f7params">
+      <f7-view :main="true" url="/" :push-state=true push-state-separator="" :master-detail-breakpoint="800">
+      </f7-view>
+    </f7-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import routes from './routes'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      // app params
+      f7params: {
+        name: 'My App',
+        id: 'com.myapp.test',
+        // specify routes for app
+        routes: routes
+      },
+      theme: 'auto'
+    };
+  },
+
 }
 </script>
 <style lang="stylus">
@@ -20,7 +32,4 @@ export default {
   font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
 </style>
