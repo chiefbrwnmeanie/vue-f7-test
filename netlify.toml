@@ -16,15 +16,12 @@ ID = "adoring-shaw-36e593"
   publish = "dist/"
 
   # Default build command.
-  command = "build"
-
-  # Directory with the lambda functions to deploy to AWS.
-  #functions = "project/functions/"
+  command = "yarn build"
 
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 [context.production]
-  publish = "/dist/"
+  publish = "dist/"
   command = "build"
   environment = { NODE_VERSION = "10.15.0" }
 
@@ -32,10 +29,6 @@ ID = "adoring-shaw-36e593"
 # inherit these settings.
 [context.deploy-preview]
   publish = "dist/"
-
-# Here is another way to define context specific environment variables.
-[context.deploy-preview.environment]
-  #ACCESS_TOKEN = "not so secret"
 
 # Branch Deploy context: all deploys that are not from a pull/merge request or
 # from the Production branch will inherit these settings.
