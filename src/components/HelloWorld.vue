@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>sucky sucky!</h1>
 
     <h3>Installed CLI Plugins</h3>
     <ul>
